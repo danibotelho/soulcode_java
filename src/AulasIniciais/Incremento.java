@@ -1,3 +1,5 @@
+package AulasIniciais;
+
 import static java.lang.System.*;
 
 public class Incremento {

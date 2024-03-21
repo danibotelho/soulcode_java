@@ -1,4 +1,4 @@
-import java.util.Scanner;
+package AulasIniciais;
 
 public class Operadores {
     public static void main(String[] args) {

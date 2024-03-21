@@ -1,6 +1,8 @@
+package AulasIniciais;
+
 import java.util.Scanner;
 
-public class elseIf {
+public class ElseIf {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -10,11 +12,11 @@ public class elseIf {
         nota = scanner.nextDouble();
 
         if(nota >= 7) {
-            System.out.println("aprovado");
+            System.out.println("Aprovado");
         } else if (nota < 6.0) {
-            System.out.println("reprovado");
+            System.out.println("Reprovado");
         } else  {
-            System.out.println("recuperação");
+            System.out.println("Recuperação");
         }
     }
 }
