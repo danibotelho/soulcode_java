@@ -33,10 +33,17 @@ public class Suprimentos {
     }
 
     public void setQuantidadeItemComprada(int quantidadeItemComprada) {
+        if (quantidadeItemComprada < 0) {
+            quantidadeItemComprada = 0;
+
+        }
         this.quantidadeItemComprada = quantidadeItemComprada;
     }
 
     public void setPrecoItem(double precoItem) {
+        if (precoItem < 0) {
+            precoItem = 0.0;
+        }
         this.precoItem = precoItem;
     }
 

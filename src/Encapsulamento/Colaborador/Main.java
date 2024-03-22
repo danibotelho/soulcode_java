@@ -5,7 +5,7 @@ public class Main {
 
         Colaborador colaborador = new Colaborador("Dani", "Botelho", -2800.00);
 
-        Colaborador colaborador1 = new Colaborador("Lara", "Tavares", 7500.50);
+        Colaborador colaborador1 = new Colaborador("Lara", "Tavares", 1000);
 
 
         System.out.println("Salário Inicial");

@@ -15,14 +15,13 @@ public class Colaborador {
     }
 
     public double salarioAnual(double salarioMensal) {
-        double Total = salarioMensal * 12;
-        return Total;
-    }
-
-    public double aumentoDeSalario(double salarioMensal) {
-        return this.salarioMensal = (salarioMensal * 1.1);
+       return  salarioMensal *  12;
 
     }
+
+    public double aumentoDeSalario(double salarioMensal ) {
+      return  this.salarioMensal =  salarioMensal *  1.1;
+   }
 
     public String getPrimeiroNome() {
         return primeiroNome;
@@ -45,6 +44,10 @@ public class Colaborador {
     }
 
     public void setSalarioMensal(double salarioMensal) {
+
+        if (salarioMensal < 0) {
+            salarioMensal = 0.0;
+        }
         this.salarioMensal = salarioMensal;
     }
 }
