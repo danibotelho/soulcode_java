@@ -1,8 +1,8 @@
 package Atividade1104.Questao02;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
-import java.lang.reflect.Array;
 
 public class Continente {
 
@@ -22,7 +22,7 @@ public class Continente {
         double dimensaoTotal = 0;
         //for para acessar a informação de dimensão de cada país
         for (Pais pais : paises) {
-            dimensaoTotal += pais.getDimensao();
+            dimensaoTotal += pais.getDimensaoTerritorial();
         }
         return dimensaoTotal;
     }
@@ -37,11 +37,41 @@ public class Continente {
     }
 
     public double densidadePopulacionalContinente() {
-        double densidadePopulacional  =  populacaoTotalContinente() / densidadePopulacionalContinente();
-        return  densidadePopulacional;
+        double densidadePopulacional = populacaoTotalContinente() / dimensaoTotalContinente();
+        return densidadePopulacional;
     }
 
+    public Pais paisComMaiorPopulacao() {
+        return paises.stream()
+                .max(Comparator.comparing(Pais::getPopulacao))
+                .orElse(null);
+    }
+    public Pais paisComMenorPopulacao() {
+        return paises.stream()
+                .min(Comparator.comparing(Pais::getPopulacao))
+                .orElse(null);
+    }
 
+    public Pais paisMaiorDimensaoTerritorial() {
+        return paises.stream()
+                .max(Comparator.comparing(Pais::getDimensaoTerritorial))
+                .orElse(null);
+    }
+
+    public Pais paisMenorDimensaoTerritorial() {
+        return paises.stream()
+                .min(Comparator.comparing(Pais::getDimensaoTerritorial))
+                .orElse(null);
+    }
+
+    public double razaoTerritorialMaiorMenor() {
+        Pais maior = paisMaiorDimensaoTerritorial();
+        Pais menor = paisMenorDimensaoTerritorial();
+        if (maior != null && menor != null && menor.getDimensaoTerritorial() != 0) {
+            return maior.getDimensaoTerritorial() / menor.getDimensaoTerritorial();
+        }
+        return 0;
+    }
 
     public String getNomeContinente() {
         return nomeContinente;

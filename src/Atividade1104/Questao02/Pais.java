@@ -2,12 +2,12 @@ package Atividade1104.Questao02;
 
 public class Pais {
     private String nomePais;
-    private double dimensao;
+    private double dimensaoTerritorial;
     private long populacao;
 
-    public Pais(String nomePais, double dimensao, int populacao) {
+    public Pais(String nomePais, double dimensaoTerritorial, int populacao) {
         this.nomePais = nomePais;
-        this.dimensao = dimensao;
+        this.dimensaoTerritorial = dimensaoTerritorial;
         this.populacao = populacao;
     }
 
@@ -15,23 +15,11 @@ public class Pais {
         return nomePais;
     }
 
-    public double getDimensao() {
-        return dimensao;
+    public double getDimensaoTerritorial() {
+        return dimensaoTerritorial;
     }
 
     public long getPopulacao() {
         return populacao;
-    }
-
-    public void setNomePais(String nomePais) {
-        this.nomePais = nomePais;
-    }
-
-    public void setDimensao(double dimensao) {
-        this.dimensao = dimensao;
-    }
-
-    public void setPopulacao(int populacao) {
-        this.populacao = populacao;
     }
 }
